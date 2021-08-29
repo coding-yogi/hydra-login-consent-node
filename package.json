@@ -2,7 +2,7 @@
   "name": "hydra-login-consent-logout",
   "version": "0.0.0",
   "bin": {
-    "hydra-login-consent-logout": "lib/app.js"
+    "hydra-login-consent-logout": "app.js"
   },
   "prettier": "ory-prettier-styles",
   "config": {
@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "serve": "node lib/app.js",
-    "start": "ts-node-dev --watch public,views --respawn src/app.ts",
+    "serve": "node app.js",
+    "start": "ts-node-dev --watch public,views --respawn app.ts",
     "test": "npm-run-all build",
     "format": "prettier --write ${npm_package_config_prettierTarget}",
     "format:check": "prettier --check ${npm_package_config_prettierTarget}"
@@ -41,5 +41,17 @@
     "ory-prettier-styles": "1.1.1",
     "prettier": "2.2.1",
     "ts-node-dev": "^1.0.0-pre.43"
-  }
+  },
+  "description": "This is a reference implementation for the User Login and Consent flow of ORY Hydra version 1.0.x in NodeJS. The application is bootstrapped using the `express` cli.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ory/hydra-login-consent-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ory/hydra-login-consent-node/issues"
+  },
+  "homepage": "https://github.com/ory/hydra-login-consent-node#readme"
 }
