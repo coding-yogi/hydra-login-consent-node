@@ -9,11 +9,10 @@ block content
                 if error
                     p.text-danger Error!!!
 
-            img(src="stylesheets/gxs-icon.png", class="responsive")
+            img(src="stylesheets/mybank_logo.png", class="responsive")
 
-            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
-            h1(id="login-title", class=h1Classes) Please sign in
-
+            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal', 'p']
+            h1(id="login-title", class=h1Classes) Sign in with MyBank
 
             input(type="hidden", name="_csrf", value=csrfToken)
             input(type="hidden", name="challenge", value=challenge)
@@ -36,6 +35,6 @@ block content
             //-signIn button
             - var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block'];
             button(class=buttonClass, type="submit", id="accept", name="submit") Sign in
-            - var buttonClass2=['btn', 'btn-lg', 'btn-danger', 'btn-block'];
+            - var buttonClass2=['btn', 'btn-lg', 'btn-outline-primary', 'btn-block'];
             button(class=buttonClass2, id="deny", name="deny") Cancel
                     
